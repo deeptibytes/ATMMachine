@@ -9,8 +9,8 @@ import java.util.SortedSet;
 import java.util.TreeSet;
 
 public enum Denomination {
-
-	FIFTYs(50),
+    
+    
 	TWENTIEs(20),
 	TENSs(10),
 	FIVEs(5),
