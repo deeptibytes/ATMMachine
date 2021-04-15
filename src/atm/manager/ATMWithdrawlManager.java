@@ -97,9 +97,10 @@ public class ATMWithdrawlManager implements IATMManager{
 								  int amount){
    
    DenomNode closestDenom = getClosestDenom(amount, Denomination.DENOM_TREE.getRoot());
-   SortedSet<Integer> smallDenomSet = (amount > Denomination.DENOM_TREE.getMax()) ?
+   SortedSet<Integer> smallDenomSet = (amount >= Denomination.DENOM_TREE.getMax()) ?
                                       Denomination.DENOM_TREE.getAllDenomSet() : 
                                       closestDenom.smallDenomSet;
+                                      System.out.println("smallDenomSet "+smallDenomSet);
   
   for(int denom : smallDenomSet){
     
