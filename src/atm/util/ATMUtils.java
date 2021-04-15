@@ -90,12 +90,12 @@ public static String prepareWithdrawlMessage(Map<Integer, Integer> denominationM
 public static boolean validateDepositInput(Map<Integer, Integer> inputMap, MessageWrapper msg){
  
     if(   isAnyNegative(inputMap) ){
-           msg.setMessage("Incorrect deposit amount");
+           msg.setMessage("Incorrect deposit amount"+"\n");
            return false;
     }
     
     if(   ! isAnyNonZero(inputMap) ){//
-           msg.setMessage("Deposit amount cannot be zero");
+           msg.setMessage("Deposit amount cannot be zero"+"\n");
           return false;
     }
     
@@ -136,7 +136,7 @@ public static boolean validateDepositInput(Map<Integer, Integer> inputMap, Messa
 
  if( inputAmt == 0 ||
      inputAmt < 0  ){
-       msg.setMessage("Incorrect or insufficient funds");
+       msg.setMessage("Incorrect or insufficient funds for "+inputAmt + "\n");
      return false;
  }
    return true;  

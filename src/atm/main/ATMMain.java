@@ -106,10 +106,10 @@ public class ATMMain {
      * Test Withdrawl Feature
      */
    System.out.println("****  Testing withdrawl ****");
-    int inputWith = 73;
+    int inputWith = 20 ;
     String messageW = atm.processWithdrawl("Deepti", inputWith);
     System.out.println(messageW);
-    int inputWith1 = 20;
+    int inputWith1 = 9;
     message = atm.processWithdrawl("Deepti", inputWith1);
      System.out.println(message);
     
